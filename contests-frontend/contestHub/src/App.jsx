@@ -3,12 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from "@/components/ui/button"
+import NavBar from './Pages/NavBar'
+import LandingPage from './Pages/LandingPage'
 
 function App() {
   return (
-     <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>Is this a button?</Button>
-    </div>
+    <>
+    <NavBar />
+     <LandingPage />
+    </>
+     
+    
   )
 }
 
