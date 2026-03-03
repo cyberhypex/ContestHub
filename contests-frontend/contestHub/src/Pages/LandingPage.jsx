@@ -1,6 +1,6 @@
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#0c0c11] text-white pt-24">
+    <div className=" bg-[#0c0c11] text-white pt-24">
 
       <section className="max-w-6xl mx-auto px-6 text-center">
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
