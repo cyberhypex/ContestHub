@@ -4,7 +4,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0c0c11]/80 backdrop-blur-xl border-b border-gray-800">
+    <nav className=" fixed top-0 left-0 right-0 z-50 bg-[#0c0c11]/80 backdrop-blur-xl border-b border-gray-800">
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-white text-xl font-semibold tracking-wide">
           ContestHub
