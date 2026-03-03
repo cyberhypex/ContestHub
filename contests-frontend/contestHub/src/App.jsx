@@ -6,12 +6,13 @@ import LandingPage from './Pages/LandingPage'
 import Footer from './Pages/Footer'
 import Layout from './Layout'
 import { BrowserRouter, Outlet, Route ,Routes} from 'react-router-dom'
-
+import { CFContests } from './Pages/CFContests'
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<LandingPage />} />
+        
       </Route>
     </Routes>
   )

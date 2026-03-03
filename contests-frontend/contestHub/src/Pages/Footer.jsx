@@ -2,7 +2,7 @@ export default function Footer() {
     
 
     return (
-        <div className="bg-[#1c1c1d] text-white py-12 px-6 ">
+        <div className=" bottom-0 left-0 right-0 bg-[#0c0c11]/80 text-white py-1 px-6 ">
             <div className="max-w-6xl mx-auto">
                 <p className="text-center text-gray-400">
                     &copy; {new Date().getFullYear()} ContestHub. All rights reserved.
