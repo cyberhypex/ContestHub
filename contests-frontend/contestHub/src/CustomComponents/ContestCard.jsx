@@ -61,7 +61,7 @@ export default function ContestCard({ contest }) {
         rel="noopener noreferrer"
         className="mt-6 inline-block text-center bg-white text-black py-2.5 rounded-lg font-medium hover:opacity-90 transition"
       >
-        View Contest
+        Register
       </a>
 
     </div>

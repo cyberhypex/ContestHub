@@ -1,22 +1,39 @@
 import { useState } from "react"
+import { NavLink } from "react-router-dom"
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Codeforces", path: "/codeforces" },
+    { name: "CodeChef", path: "/codechef" },
+    { name: "LeetCode", path: "/leetcode" },
+  ]
+
   return (
-    <nav className=" fixed top-0 left-0 right-0 z-50 bg-[#0c0c11]/80 backdrop-blur-xl border-b border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0c0c11]/80 backdrop-blur-xl border-b border-gray-800">
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+        
         <div className="text-white text-xl font-semibold tracking-wide">
           ContestHub
         </div>
 
-        <ul className="hidden md:flex items-center gap-10 text-gray-400 font-medium">
-          {["Home", "Codeforces", "CodeChef", "LeetCode"].map((item) => (
-            <li key={item} className="relative cursor-pointer group">
-              <span className="group-hover:text-white transition duration-300">
-                {item}
-              </span>
-              <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
+        <ul className="hidden md:flex items-center gap-10 font-medium">
+          {navItems.map((item) => (
+            <li key={item.name} className="relative group">
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  `transition duration-300 ${
+                    isActive ? "text-white" : "text-gray-400 hover:text-white"
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+
+              <span className="absolute left-0 -bottom-2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
             </li>
           ))}
         </ul>
@@ -46,11 +63,20 @@ export default function NavBar() {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="flex flex-col px-6 py-6 gap-6 bg-[#121218] text-gray-400 font-medium">
-          {["Home", "Codeforces", "CodeChef", "LeetCode"].map((item) => (
-            <li key={item} className="hover:text-white transition duration-300 cursor-pointer">
-              {item}
-            </li>
+        <ul className="flex flex-col px-6 py-6 gap-6 bg-[#121218] font-medium">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.name}
+              to={item.path}
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `transition duration-300 ${
+                  isActive ? "text-white" : "text-gray-400 hover:text-white"
+                }`
+              }
+            >
+              {item.name}
+            </NavLink>
           ))}
         </ul>
       </div>
