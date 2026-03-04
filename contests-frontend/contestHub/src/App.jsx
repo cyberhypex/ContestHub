@@ -13,9 +13,9 @@ function App() {
     <div className="min-h-screen bg-[#0c0c11] text-white flex flex-col">
       <NavBar />
       
-       <main className="flex-grow pt-24">
-    <Outlet />
-  </main>
+      <main className="flex-grow pt-28">
+      <Outlet />
+      </main>
    
      
       <Footer />

@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 export default function LandingPage() {
   return (
     <div className=" bg-[#0c0c11] text-white pt-24">
@@ -15,7 +17,7 @@ export default function LandingPage() {
 
         <div className="mt-10 flex justify-center gap-6">
           <button className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:opacity-90 transition">
-            Explore Contests
+            <NavLink to="/all">Explore Contests</NavLink>
           </button>
           
         </div>

@@ -2,10 +2,12 @@ import { useEffect, useState } from "react"
 import axiosInstance from "@/axios"
 import ContestCard from "@/CustomComponents/ContestCard"
 import { Button } from "@/components/ui/button"
+import { useNavigate } from "react-router"
 export default function CCContests() {
   const [contests, setContests] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const navigate=useNavigate()
 
   useEffect(() => {
     const fetchContests = async () => {
@@ -47,6 +49,7 @@ export default function CCContests() {
       </div>
       <div className="mt-8 mb-8  flex justify-center gap-6">
   <Button
+    onClick={()=>navigate("/")}
     className="bg-[#121218] border border-gray-800 text-gray-300 
                hover:bg-[#1a1a22] hover:border-gray-600 
                hover:text-white transition duration-300 
@@ -56,6 +59,7 @@ export default function CCContests() {
   </Button>
 
   <Button
+    onClick={()=>navigate(-1)}
     className="bg-white text-black 
                hover:opacity-90 
                transition duration-300 
