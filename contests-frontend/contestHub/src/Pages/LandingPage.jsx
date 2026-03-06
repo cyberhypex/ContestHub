@@ -54,6 +54,13 @@ export default function LandingPage() {
           Your competitive programming journey, streamlined.
         </p>
       </section>
+      <section className="max-w-6xl mx-auto px-6 mt-12 mb-20 text-center">
+        <h2 className="text-3xl font-semibold">
+          Built with ❤️ by <a href="https://www.linkedin.com/in/anshuman-gogoi-b99671211/" target="_blank" className="text-blue-400 hover:underline">Anshuman Gogoi</a>
+        </h2>
+        <br />
+        <p className="mt-4 text-gray-400"> Special thanks to <a href="https://github.com/Mihir2423" target="_blank" className="text-blue-400 hover:underline">Mihir2423 </a> for the backend API</p>
+        </section>
 
     </div>
   )
